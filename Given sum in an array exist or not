@@ -1,0 +1,18 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int nums[] = {8,7,2,5,3,1};
+        int n = nums.length;
+        int target = 10;
+        HashSet<Integer> set = new HashSet<>();
+        for(int i = 0; i< n; i++){
+            int val = Math.abs(nums[i] - target);
+            if(set.contains(val)){
+                System.out.print("True");
+                break;
+            }else{
+               set.add(nums[i]); 
+            }
+        }
+    }
+}
