@@ -1,0 +1,26 @@
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s1 = "Mango";
+        String s2 = "AGomn";
+        System.out.print("These strings are "+ checkAnagrame(s1, s2)+" Anagram");
+    }
+    
+    static String checkAnagrame(String s1,String s2){
+        if(s1.length()!=s2.length()){
+            return "No";
+        }else{
+            char arr1[] = s1.toLowerCase().toCharArray();
+            char arr2[] = s2.toLowerCase().toCharArray();
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+            String a1 = new String(arr1);
+            String a2 = new String(arr2);
+            if(a1.equals(a2)){
+                return "Yes";
+            }
+        }
+        return "No";
+    }
+}
